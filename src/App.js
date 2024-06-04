@@ -16,7 +16,6 @@ function App() {
           rel="noopener noreferrer"
         >
           Ler Mais para aprender
-          Estamos te esperando
         </a>
       </header>
     </div>
