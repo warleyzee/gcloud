@@ -1,10 +1,34 @@
-// import UploadPdf from './components/uploadPdf/UploadPdf';
-import PdfList from './components/pdfList/PdfList';
+// import PdfList from './components/pdfComponents/pdfList/PdfList'
+
+// function App() {
+//   return (
+//     <div>
+//       <PdfList />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// src/App.js
+import React, { useState } from 'react';
+import Login from './components/pages/login/Login';
+import PdfList from './components/pdfComponents/pdfList/PdfList';
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const handleLoginSuccess = () => {
+    setIsAuthenticated(true);
+  };
+
   return (
-    <div>
-      <PdfList />
+    <div className="App">
+      {isAuthenticated ? (
+        <PdfList />
+      ) : (
+        <Login onLoginSuccess={handleLoginSuccess} />
+      )}
     </div>
   );
 }

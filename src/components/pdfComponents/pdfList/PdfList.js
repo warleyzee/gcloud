@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import UploadPdf from '../uploadPdf/UploadPdf';
+import PdfUpload from '../PdfUpload/UploadPdf';
 import PdfViewer from '../pdfViewer/PdfViewer';
 
 function PdfList() {
@@ -25,7 +25,7 @@ function PdfList() {
   return (
     <div>
       <h2>Lista de PDFs</h2>
-      <UploadPdf onUploadSuccess={loadPdfs} />
+      <PdfUpload onUploadSuccess={loadPdfs} />
       <ul>
         {pdfs.map((pdf) => (
           <li key={pdf.name} onClick={() => setSelectedPdf(pdf.url)}>

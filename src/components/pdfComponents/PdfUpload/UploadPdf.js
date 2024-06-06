@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function UploadPdf( { onUploadSuccess }){
+function PdfUpload( { onUploadSuccess }){
   const [selectedFile, setSelectedFile] = useState(null);
 
   const handleFileChange = (event) => {
@@ -44,5 +44,5 @@ function UploadPdf( { onUploadSuccess }){
   );
 }
 
-export default UploadPdf;
+export default PdfUpload;
 
